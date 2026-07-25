@@ -22,6 +22,7 @@
 html, body{
     width: 100%;
     height: 100vh; 
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
 }
@@ -850,8 +851,103 @@ footer p{
     }
 }
 
-/* Autorise le defilement de la page (le contenu de la
-   gastronomie depasse la hauteur de l'ecran) */
-html, body{
-    overflow-y: auto;
+/*--------------- 
+  Histoire
+-----------------*/
+
+.histoire{
+    flex: 1;
+    width: 100%;
+    background-color: #181818;
+    color: #f1f1f1;
+}
+
+.histoire .titre-histoire{
+    background-color: #0f0f0f;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #282828;
+}
+
+.histoire .titre-histoire h2{
+    margin: 0;
+    color: #3498db;
+    font-size: 1.8rem;
+}
+
+.histoire .region-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 15px;
+}
+
+.histoire .image-placeholder{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background-color: #2c3e50;
+}
+
+.histoire .image-placeholder img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.histoire .region-block{
+    background-color: #212121;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.histoire .region-block:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.2);
+}
+
+.histoire .description-box{
+    padding: 15px;
+}
+
+.histoire .description-box h2{
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: 0 0 8px 0;
+}
+
+.histoire .description-box p{
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+}
+
+/* ------------------------
+   responsive histoire
+--------------------------- */
+
+@media (max-width: 1024px){
+    .histoire .region-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .histoire .region-grid{
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .histoire .titre-histoire h2{
+        font-size: 1.3rem;
+    }
+
+    .histoire .description-box h2{
+        font-size: 1rem;
+    }
 }
