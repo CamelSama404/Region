@@ -586,3 +586,272 @@ footer p{
         grid-template-columns: 1fr;
     }
 }
+
+/*--------------- 
+   Gastronomie
+-----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.gastronomie,
+.gastronomie *{
+    font-family: "Poppins", sans-serif;
+}
+
+.gastronomie{
+    flex: 1;
+    width: 100%;
+    background-color: rgb(1, 1, 27);
+}
+
+.gastronomie .titre-gastro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(0, 174, 255);
+    padding: 20px 0;
+    letter-spacing: 1px;
+}
+
+.gastronomie .droite {
+    display: flex;
+    justify-content: right;
+    color: white;
+}
+
+.gastronomie .droite img {
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 40px;
+    margin-right: 50px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.gastronomie h2 {
+    color: rgb(3, 75, 127);
+}
+
+.gastronomie .images {
+    background-image: url(../img/gastronomie/poisson3.jpeg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 40px;
+    animation: gastroChangeBackground 12s infinite;
+}
+
+.gastronomie h3 {
+    border: 5px solid white;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(0, 0, 0, 0.258);
+}
+
+.gastronomie .left {
+    font-weight: bold;
+    padding: 40px;
+    color: white;
+}
+
+.gastronomie .right {
+    display: flex;
+    justify-content: right;
+    padding: 50px;
+    font-weight: bold;
+    color: rgb(209, 209, 209);
+}
+
+.gastronomie .image .galerie {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 30px;
+}
+
+.gastronomie .image .galerie .sary {
+    width: 30%;
+    height: 250px;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    background-color: white;
+    padding: 20px;
+}
+
+.gastronomie .image .galerie .sary img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.gastronomie .image .galerie .description {
+    transform: translateY(350px);
+    background: white;
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.gastronomie .image .galerie .sary:hover .description {
+    transform: translateY(-150px);
+}
+
+.gastronomie .images2 {
+    background-image: url(../img/gastronomie/man4.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 40px;
+    animation: gastroChange 12s infinite;
+}
+
+.gastronomie .images3 {
+    background-image: url(../img/gastronomie/beef.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 40px;
+    animation: gastroChange2 12s infinite;
+}
+
+.gastronomie .images4 {
+    background-image: url(../img/gastronomie/jus.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    font-size: 40px;
+    animation: gastroChange3 12s infinite;
+}
+
+@keyframes gastroChangeBackground {
+    0% {
+        background-image: url(../img/gastronomie/poisson3.jpeg);
+    }
+    33% {
+        background-image: url(../img/gastronomie/poisson.jpg);
+    }
+    66% {
+        background-image: url(../img/gastronomie/cal3.jpg);
+    }
+    100% {
+        background-image: url(../img/gastronomie/crabe.jpg);
+    }
+}
+
+@keyframes gastroChange {
+    0% {
+        background-image: url(../img/gastronomie/man4.jpg);
+    }
+    50% {
+        background-image: url(../img/gastronomie/cac2.jpg);
+    }
+    100% {
+        background-image: url(../img/gastronomie/bele2.jpg);
+    }
+}
+
+@keyframes gastroChange2 {
+    0% {
+        background-image: url(../img/gastronomie/beef.jpg);
+    }
+    50% {
+        background-image: url(../img/gastronomie/beef3.jpg);
+    }
+    100% {
+        background-image: url(../img/gastronomie/poulet.jpg);
+    }
+}
+
+@keyframes gastroChange3 {
+    0% {
+        background-image: url(../img/gastronomie/jus.jpg);
+    }
+    50% {
+        background-image: url(../img/gastronomie/boi.jpg);
+    }
+    100% {
+        background-image: url(../img/gastronomie/coco.jpg);
+    }
+}
+
+/* ------------------------
+   responsive gastronomie
+--------------------------- */
+
+@media screen and (max-width: 800px){
+
+    .gastronomie .image .galerie{
+        justify-content: center;
+    }
+
+    .gastronomie .image .galerie .sary{
+        width: 45%;
+    }
+
+    .gastronomie .droite img{
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .gastronomie .droite{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .gastronomie .image .galerie .sary{
+        width: 100%;
+        height: auto;
+    }
+
+    .gastronomie .left,
+    .gastronomie .right{
+        padding: 20px;
+    }
+
+    .gastronomie .images,
+    .gastronomie .images2,
+    .gastronomie .images3,
+    .gastronomie .images4{
+        font-size: 26px;
+        text-align: center;
+    }
+}
+
+/* Autorise le defilement de la page (le contenu de la
+   gastronomie depasse la hauteur de l'ecran) */
+html, body{
+    overflow-y: auto;
+}
