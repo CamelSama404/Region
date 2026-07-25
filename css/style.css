@@ -67,6 +67,7 @@ header h1{
     font-size: 18px;
     font-weight: 300;
     color: var(--couleur-text);
+    border-radius: 20px;
     padding: 12px 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -146,6 +147,7 @@ footer p{
     background-color: rgba(0, 0, 0, 0.45); /* lisibilité du texte sur la photo */
     border-radius: 10px;
     color: var(--couleur-text);
+    font-weight: 500;
 }
 
 /*--------------- 
@@ -153,7 +155,7 @@ footer p{
 -----------------*/
 
 .about{
-	background-color: RGBa(64, 200, 130, 0.15);
+	/* background-color: RGBa(64, 200, 130, 0.15); */
     flex: 1;
 }
 
@@ -200,13 +202,17 @@ footer p{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(../img/img-acc.jpg);
+    background-image: url(../img/img-con.jpg);
     background-size: cover;
 }
 
 .contact .content{
     max-width: 800px;
     text-align: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 10px;
+
 }
 
 .contact .content h2{
@@ -216,7 +222,7 @@ footer p{
 }
 
 .contact .content p{
-    font-weight: 300;
+    font-weight: 400;
     color: white;
 }
 
@@ -256,6 +262,8 @@ footer p{
     margin-left: 20px;
     font-size: 16px;
     color: var(--couleur-text);
+    background-color: rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
     flex-direction: column;
     font-weight: 300;
 }
@@ -321,9 +329,124 @@ footer p{
     font-size: 18px;
 }
 
-/*----------------
- Responsive
------------------- */
+/*--------------- 
+    tourisme
+-----------------*/
+
+.tourism{
+    flex: 1;
+    background-color: transparent;
+    padding: 0 20px;
+}
+
+.tourism .debut{
+    max-width: 800px;
+    margin: 50px auto 40px auto;
+    text-align: center;
+}
+
+.tourism .debut h2{
+    color: var(--couleur-principale);
+    font-size: 2.3rem;
+    margin-bottom: 15px;
+}
+
+.tourism .debut .VISIT{
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.SCT-tou{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.contenair-tou{
+    flex: 1 1 500px;
+}
+
+.contenair-tou h3{
+    text-align: center;
+    padding: 10px;
+    color: var(--couleur-principale);
+    font-size: 1.4rem;
+}
+
+.contenair-tou .image{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.contenair-tou .box{
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contenair-tou .box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.contenair-tou .images{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.contenair-tou .para{
+    padding: 10px 12px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #333;
+}
+
+.contenair-tou1{
+    flex: 1 1 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenair-tou1 #images{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
+}
+
+.footer-tou{
+    background-color: var(--couleur-principale);
+    color: var(--couleur-text);
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: auto;
+}
+
+.footer-tou p{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-tou a{
+    color: var(--couleur-primaire);
+}
+
+/*-------------------------------
+ Responsive acceil contact about
+--------------------------------- */
 
 @media(max-width: 991px){
 
@@ -365,6 +488,7 @@ footer p{
     .nav-bar nav a{
         display:block;
         padding:18px;
+        border-radius: 0px;
     }
 
     .nav-bar nav a:hover{
@@ -411,12 +535,54 @@ footer p{
         margin-bottom: 40px;
     }
 
+    .contenair-con .contactInfo .box .icon{
+        min-width: 50px;
+        height: 50px;
+    }
+
     .contenair-con .contactInfo,
     .contenair-con .contactForm{
         width: 100%;
+        border-radius: 20px;
     }
+
 }
 
 @media(max-width: 419px){
-    /* pour le contact frere */
+
+    /* contacte */
+
+    .contenair-con .contactInfo,
+    .contenair-con .contactForm{
+        padding: 15px;
+        width: 270px;
+    }
+
+}
+
+/* ------------------------
+   responsive tourisme
+--------------------------- */
+
+@media screen and (max-width: 800px){
+
+    .tourism .debut h2{
+        font-size: 1.7rem;
+    }
+
+    .contenair-tou .image{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .SCT-tou{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    .contenair-tou .image{
+        grid-template-columns: 1fr;
+    }
 }
