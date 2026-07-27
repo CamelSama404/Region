@@ -3,13 +3,14 @@
     --couleur-principale: #191970;
     --couleur-primaire: #ffa07a;
     --couleur-hover: #ff00ff;
-     --couleur-form: #fff;
+    --couleur-form: #fff;
+    --couleur-backg: rgb(1, 1, 27);
 
     /* couleur des texts */
     --couleur-btn: #00bcd4;
     --couleur-text: white;
     --couleur-titre1: #00bcd4;
-    --couleur-titre2: #008b8b;
+    --couleur-titre2: rgb(0, 174, 255);
 }
 
 *{
@@ -133,7 +134,7 @@ footer p{
     flex: 1;
     display: grid;
     place-items: center;
-    background-image: url(../img/img-acc.jpg);
+    background-image: url(../img/img-acc.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,13 +152,22 @@ footer p{
     font-weight: 500;
 }
 
+.acceuil  .contenair-acc .p1{
+    margin-bottom: 20px;
+}
+
+.acceuil .contenair-acc a{
+    text-decoration: none;
+}
+
 /*--------------- 
   About
 -----------------*/
 
 .about{
-	/* background-color: RGBa(64, 200, 130, 0.15); */
+	background-color: var(--couleur-backg); 
     flex: 1;
+    color: var(--couleur-text);
 }
 
 .about .content{
@@ -175,6 +185,7 @@ footer p{
 .ranger-abo .box img{
 	width: 200px;
 	height: auto;
+    border-radius: 100%;
 }
 
 .ranger-abo .box{
@@ -337,6 +348,7 @@ footer p{
 .tourism{
     flex: 1;
     background-color: transparent;
+    background-color: var(--couleur-backg);
     padding: 0 20px;
 }
 
@@ -347,7 +359,7 @@ footer p{
 }
 
 .tourism .debut h2{
-    color: var(--couleur-principale);
+    color: rgb(0, 174, 255);
     font-size: 2.3rem;
     margin-bottom: 15px;
 }
@@ -355,7 +367,7 @@ footer p{
 .tourism .debut .VISIT{
     font-size: 1.05rem;
     line-height: 1.6;
-    color: #333;
+    color: var(--couleur-text);
 }
 
 .SCT-tou{
@@ -400,8 +412,10 @@ footer p{
 
 .contenair-tou .images{
     width: 100%;
-    height: 150px;
+    aspect-ratio: 4 / 3;
+    height: auto;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -410,13 +424,6 @@ footer p{
     font-size: 0.85rem;
     line-height: 1.4;
     color: #333;
-}
-
-.contenair-tou1{
-    flex: 1 1 320px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .contenair-tou1 #images{
@@ -602,7 +609,7 @@ footer p{
 .gastronomie{
     flex: 1;
     width: 100%;
-    background-color: rgb(1, 1, 27);
+    background-color: var(--couleur-backg);
 }
 
 .gastronomie .titre-gastro{
@@ -858,7 +865,7 @@ footer p{
 .histoire{
     flex: 1;
     width: 100%;
-    background-color: #181818;
+    background-color: rgb(1, 1, 27);
     color: #f1f1f1;
 }
 
